@@ -1,3 +1,5 @@
+let score = 0;
+
 const headline = document.querySelector("#headline-1");
 console.log(headline);
 
@@ -5,7 +7,9 @@ const question = document.getElementById("question-1");
 const answer1 = document.getElementById("answer-1");
 
 answer1.addEventListener("click", function () {
+  score = score + 1;
   question.textContent = "Correct!";
+  document.getElementById("score").textContent = `Score: ${score}`;
 });
 
 const answer2 = document.getElementById("answer-2");
