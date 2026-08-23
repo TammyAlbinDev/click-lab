@@ -1,0 +1,6 @@
+.banner {
+  padding: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
