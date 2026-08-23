@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CBeach Quiz</title>
+  <title>Beach Quiz</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/choice-list.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <h1 id="headline-1">Beach Quiz</h1>
-    <p><a href="about.html">About</a></p>
-    <p id="greeting"></p>
-    <p id="score">Score: 0</p>
-    <p id="question-1">Which ocean is next to the East Coast of the United States?</p>
 
-    <p id="answer-message">Pick one.</p>    
- 
-<button id="hint-button">Hint</button>   
+  <p><a href="about.html">About</a></p>
 
-<button id="answer-1">Atlantic Ocean</button>
-<button id="answer-2">Pacific Ocean</button>
-<button id="answer-3">Indian Ocean</button>
+  <p id="greeting"></p>
 
-<script src="script.js"></script> 
-</body>   
+  <p id="score">Score: 0</p>
+
+  <div class="card">
+    <h3 id="question-1">
+      Which ocean is next to the East Coast of the United States?
+    </h3>
+
+    <p id="answer-message">Pick one.</p>
+
+    <button id="hint-button">Hint</button>
+
+    <div class="choice-list">
+      <button id="answer-1">Atlantic Ocean</button>
+      <button id="answer-2">Pacific Ocean</button>
+      <button id="answer-3">Indian Ocean</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Which ocean is next to the West Coast of the United States?</h3>
+
+    <div class="choice-list">
+      <button>Pacific Ocean</button>
+      <button>Atlantic Ocean</button>
+      <button>Indian Ocean</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Which ocean is the largest?</h3>
+
+    <div class="choice-list">
+      <button>Atlantic Ocean</button>
+      <button>Pacific Ocean</button>
+      <button>Indian Ocean</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
