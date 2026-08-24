@@ -16,3 +16,8 @@ Anyone who wants to test their knowledge about beaches and oceans.
 
 ## My track
 Quiz
+
+## What I'd add next
+
+This is a quiz game about beaches and oceans.
+I'd add more quiz questions and keep track of the player's best score.
