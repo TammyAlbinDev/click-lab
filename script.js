@@ -98,6 +98,8 @@ const hintButton = document.getElementById("hint-button");
 hintButton.addEventListener("click", function () {
   document.getElementById("answer-message").textContent =
     "Hint: Think about the ocean along the eastern United States.";
+
+  hintButton.disabled = true;
 });
 
 // Greeting
