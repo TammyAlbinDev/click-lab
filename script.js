@@ -20,7 +20,10 @@ const question = document.getElementById("question-1");
 const answer1 = document.getElementById("answer-1");
 
 answer1.addEventListener("click", function () {
+  if (answer1.disabled) return; 
+    
   score = score + 1;
+  answer1.disabled=true;  
   question.textContent = "Correct!";
   scoreDisplay.textContent = `Score: ${score}`;
   updateResult();
@@ -43,7 +46,10 @@ answer3.addEventListener("click", function () {
 const answer4 = document.getElementById("answer-4");
 
 answer4.addEventListener("click", function () {
+    if (answer4.disabled) return;
+    
   score = score + 1;
+    answer4.disabled = true;
   answer4.parentElement.previousElementSibling.textContent = "Correct!";
   scoreDisplay.textContent = `Score: ${score}`;
   updateResult();
@@ -71,7 +77,10 @@ answer7.addEventListener("click", function () {
 const answer8 = document.getElementById("answer-8");
 
 answer8.addEventListener("click", function () {
+  if (answer8.disabled) return;
+
   score = score + 1;
+  answer8.disabled = true;
   answer8.parentElement.previousElementSibling.textContent = "Correct!";
   scoreDisplay.textContent = `Score: ${score}`;
   updateResult();
