@@ -5,29 +5,16 @@ console.log(headline);
 
 const scoreDisplay = document.getElementById("score");
 
-// Result box
-const resultBox = document.querySelector(".result-box");
-
-function updateResult() {
-  if (score === 3) {
-    resultBox.textContent = `Quiz complete! You scored ${score} out of 3.`;
-
-    answer1.disabled = true;
-    answer4.disabled = true;
-    answer8.disabled = true;
-  }
-}
-
 // Question 1
 const question = document.getElementById("question-1");
 
 const answer1 = document.getElementById("answer-1");
 
 answer1.addEventListener("click", function () {
-  if (answer1.disabled) return; 
-    
+  if (answer1.disabled) return;
+
   score = score + 1;
-  answer1.disabled=true;  
+  answer1.disabled = true;
   question.textContent = "Correct!";
   scoreDisplay.textContent = `Score: ${score}`;
   updateResult();
@@ -50,10 +37,10 @@ answer3.addEventListener("click", function () {
 const answer4 = document.getElementById("answer-4");
 
 answer4.addEventListener("click", function () {
-    if (answer4.disabled) return;
-    
+  if (answer4.disabled) return;
+
   score = score + 1;
-    answer4.disabled = true;
+  answer4.disabled = true;
   answer4.parentElement.previousElementSibling.textContent = "Correct!";
   scoreDisplay.textContent = `Score: ${score}`;
   updateResult();
@@ -119,3 +106,43 @@ const randomGreeting =
   greetings[Math.floor(Math.random() * greetings.length)];
 
 greeting.textContent = randomGreeting;
+
+// Results
+const resultBox = document.querySelector(".result-box");
+
+function updateResult() {
+  if (score === 3) {
+    resultBox.textContent = `Quiz complete! You scored ${score} out of 3.`;
+
+    answer1.disabled = true;
+    answer4.disabled = true;
+    answer8.disabled = true;
+  }
+}
+
+// Start Over
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", function () {
+  score = 0;
+  scoreDisplay.textContent = "Score: 0";
+
+  answer1.disabled = false;
+  answer4.disabled = false;
+  answer8.disabled = false;
+
+  question.textContent =
+    "Which ocean is next to the East Coast of the United States?";
+
+  answer4.parentElement.previousElementSibling.textContent =
+    "Which ocean is next to the West Coast of the United States?";
+
+  answer8.parentElement.previousElementSibling.textContent =
+    "Which ocean is the largest?";
+
+  resultBox.textContent = "Quiz result will appear here.";
+
+  hintButton.disabled = false;
+
+  document.getElementById("answer-message").textContent = "Pick one.";
+});
