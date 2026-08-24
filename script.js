@@ -11,6 +11,10 @@ const resultBox = document.querySelector(".result-box");
 function updateResult() {
   if (score === 3) {
     resultBox.textContent = `Quiz complete! You scored ${score} out of 3.`;
+
+    answer1.disabled = true;
+    answer4.disabled = true;
+    answer8.disabled = true;
   }
 }
 
